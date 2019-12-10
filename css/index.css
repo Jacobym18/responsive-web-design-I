@@ -1,4 +1,3 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -64,62 +63,168 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 /* Your code starts here! */
 head, body {
-	width: 480px;
+	max-width: 1000px;
     margin: 0 auto;
 }
+@media(max-width: 800px){
+	head, body{
+		max-width: 800px;
+		margin: 0 auto;}
+}
 body nav {
-    display:flex;
-    flex-direction: column-reverse;
+	display:flex;
     align-items: center;
 }
 nav{
-    margin-bottom: 10%;
+    margin-bottom: 4%;
+}
+.nav-items{
+	display: flex;
+	justify-content: space-around;
+	/* border-bottom: 0.5px solid black; */
+	width: 100%;
+	margin: 2% 0;
+	/* padding-bottom: 3%; */
+	align-items: center;
 }
 nav a{
 	text-decoration: none;
-    color: lightgrey;
-    /* border-bottom: 1px solid black; */
+	color: lightgrey;
 }
+
+@media(max-width: 800px) {
+	 nav {
+		 display: flex;
+		flex-direction: column-reverse;
+	}
+	.nav-items{
+		display: flex;
+		text-decoration: none;
+		justify-content: center;
+		color: lightgrey;
+		/* border-bottom: 0.5px solid black; */
+		width: 100%;
+		margin: 2% 0;
+		/* padding-bottom: 3%; */
+		align-items: center;
+	}
+	nav a{
+		display: flex;
+		text-decoration: none;
+		justify-content: center;
+		color: lightgrey;
+		/* border-bottom: 0.5px solid black; */
+		width: 100%;
+		margin: 2% 0;
+		/* padding-bottom: 3%; */
+		align-items: center;
+	}
+}
+	
+
 #header{
 	display: flex;
+	margin:0 10%;
+	margin-bottom:8%;
+    /* flex-direction:column; */
 }
 #header .left{
-	margin:5%;
-	width:50%;
-	
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	margin-right:15%;
+	align-items: center;
 }
 #header .left h1{
-	font-size:90px;
+	font-size:85px;
 	text-align:center;
-	width: 60%;
+    width: 87%;
 }
+
 button{
-	margin-left:19%;
+	/* border-radius: 12px; */
+    background:none;
+    border: 1px solid black;
+    padding:8px 55px;
+    margin-bottom: 10%;
+
 }
+@media(max-width: 800px){
+
+	#header .right img{
+	display: none;
+}
+#header .left{
+	width: 800px;
+}
+}
+
 #top-cont{
 	display: flex;
-	margin: 5% 0;
+}
+#top-cont div{
+	margin: 3% 0;
 }
 #top-cont p{
 	width: 87%;
 }
+
+@media(max-width: 800px){
+	#top-cont{
+		margin: 0 2%;
+	}
+	#top-cont p{
+		width: 95%;
+	}
+}
+
 .middle-img{
 	width: 100%;
 }
+
+@media(max-width: 800px){
+	.middle-img{
+	width:98% ;
+	margin:1% 1%;
+}
+}
+
 #bottom-cont{
-display: flex;	
+display: flex;
+align-items: center;	
 }
 #bottom-cont div{
-
-width: 33%;
-margin: 5% 0;
+/* width: 33%; */
+margin: 3% 0;
 }
 #bottom-cont p{
 width: 87%;
 }
+
+@media(max-width: 800px){
+	#bottom-cont{
+		margin: 0 2%;
+}
+
 address{
 	display:flex;
 	flex-direction: column;
@@ -128,21 +233,24 @@ address{
 	
 }
 address h2{
-margin-top: 2%;
+margin-top: 3%;
 }
 address p{
 	margin-bottom: 2%;
 }
 address .street{
-	width: 14%;
+	width: 29%;
+}
+@media(max-width: 800px){	
+	address{
+		margin: 0 2%;
+	}
 }
 footer{
 	display: flex;
 	justify-content: center;
 	
 }
-
-.headcont div{
-display:flex
+hr{
+	border: 1px solid black;
 }
-
