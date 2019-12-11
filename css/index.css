@@ -88,7 +88,14 @@ head, body {
 @media(max-width: 800px){
 	head, body{
 		max-width: 800px;
-		margin: 0 auto;}
+		margin: 0 auto;
+	}
+}
+@media(max-width: 500px){
+	head, body{
+		max-width: 500px;
+		margin: 0 auto;
+	}
 }
 body nav {
 	display:flex;
@@ -139,6 +146,18 @@ nav a{
 		align-items: center;
 	}
 }
+
+@media(max-width: 500px){
+	nav a {
+		padding-bottom: 2%;
+		border-bottom: 0.5px solid black;
+	}
+	.nav-items{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
 	
 
 #header{
@@ -176,6 +195,10 @@ button{
 #header .left{
 	width: 800px;
 }
+}@media(max-width: 500px){
+	#header .left{
+		width: 500px;
+	}	
 }
 
 #top-cont{
@@ -195,6 +218,14 @@ button{
 	#top-cont p{
 		width: 95%;
 	}
+}
+@media(max-width: 500px){
+	#top-cont{
+		display: flex;
+		flex-direction: column;
+		margin: 5% 2%;
+	}
+	
 }
 
 .middle-img{
@@ -224,6 +255,15 @@ width: 87%;
 	#bottom-cont{
 		margin: 0 2%;
 }
+}
+@media(max-width: 500px){
+	#bottom-cont{
+		display: flex;
+		flex-direction: column;
+		margin: 5% 2%;
+	}
+	
+}
 
 address{
 	display:flex;
@@ -246,10 +286,20 @@ address .street{
 		margin: 0 2%;
 	}
 }
+@media(max-width: 500px){
+	address{
+		margin: 3% 2%;
+	}
+	address p{
+		margin-bottom: 2%;
+	}
+	address .street{
+		width:35%;
+	}
+}
 footer{
 	display: flex;
 	justify-content: center;
-	
 }
 hr{
 	border: 1px solid black;
